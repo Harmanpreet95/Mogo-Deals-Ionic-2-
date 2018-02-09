@@ -1,0 +1,75 @@
+<!--ion-header>
+  <ion-navbar color="blue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Details</ion-title>
+   
+  </ion-navbar>
+</ion-header-->
+
+<ion-header>
+  <ion-navbar color="blue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Details</ion-title>
+   
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+ <div class="top_image">
+   <img [src]="this.detaildeal.image">
+      </div>
+   
+   <div *ngIf = "this.like_check == 0 || this.like_check == 2" class="lft_rating">
+     <img (click)="like()" class="left_dtl" src="assets/images/detail_icon.png" >
+     <span>{{this.detaildeal.totallike}}</span>
+     </div>
+        <div *ngIf = "this.like_check == 1" class="lft_rating">
+     <img (click)="like()" class="left_dtl" src="assets/images/detail_icon2.png">
+     <span>{{this.detaildeal.totallike}}</span>
+     </div>
+    
+  
+
+
+   <img (click) = "socialshare('Hi!Checkout the link here', 'MOGODeals', this.detaildeal.rest_base + this.detailHotel.logo, 'https://www.thepolyglotdeveloper.com')" class="right_dtl" src="assets/images/detail_share.png">
+
+<!--<img class="right_dtl" src="assets/images/detail_share.png">-->
+   
+
+   <div class="list_detail">
+     <ul>
+      <li><span class="slider_txt">${{this.detaildeal.price}} for {{this.detaildeal.deal_name}} -</span> <span class="lalit_detl">{{this.detailHotel.name}}</span></li>
+
+      <li><img src="assets/images/end_lst.png" class="dtl_pin">
+      <span class="detl_text">HURRY! ENDS IN   <p id="demo"></p></span>
+      </li>
+      <li><img src="assets/images/loacate.png" class="dtl_pin"><span class="detl_text">{{this.detailHotel.city}}(16001)</span></li>
+      <li><img src="assets/images/dtl_con.png" class="dtl_pin1"><span class="detl_text">{{this.DEAL_DISTANCE}}Km</span></li>
+      <li><img src="assets/images/phn_dtl.png" class="dtl_pin2"><span class="detl_text">{{this.detailHotel.owner_phone}}</span></li>
+       </ul>
+     </div>
+    <!--<h1>
+     {{hoursDisplay ? hoursDisplay : '00'}} : {{(minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}} : {{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}} <br/>
+        </h1>-->
+
+   
+
+
+
+<!--<div><button (click)="subscribeTimer0()">{{timer0button}}  1 sec timer</button>{{counter0}}</div>-->
+ 
+  <div class="about_dtl">
+       <h3>About Deal</h3>
+       <p [innerHTML]="this.detaildeal.deal_description">
+</p>
+
+       <!--<p ng-bind-html="this.detaildeal.deal_description"></p>-->
+       </div>
+       <div class="get_btton">
+         <button ion-button full class="fotr_txt" (click)="get_nxt();">get deal now</button>
+       </div>
+</ion-content>

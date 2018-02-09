@@ -1,0 +1,88 @@
+page-location {
+.location_icon {
+  width: 100%;
+  float: left;
+  margin: 10px 0;
+}
+.location_icon img {
+  width: 40px;
+  height: 40px;
+  float: none;
+  margin: 0 auto;
+  display: table;
+}
+.location_icon h3 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    text-transform: capitalize;
+    color: #1a1a1a;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 5px;
+}
+.locate_alrdy {
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+}
+.locate_alrdy h5 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    position: relative;
+    color: #878787;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+.locate_alrdy h5::after{
+  content: '';
+    width: 36%;
+    height: 1px;
+    background: #bababa;
+    position: absolute;
+    top: 7px;
+    right: 0%;
+}
+.locate_alrdy h5::before{
+  content: '';
+width: 36%;
+height: 1px;
+background: #bababa;
+position: absolute;
+top: 7px;
+left: 0%;
+}
+.locality_text {
+    width: 100%;
+    float: left;
+    margin: 30px 0;
+}
+.locality_text h3 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 21px;
+}
+.locality_lst h4 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-bottom: 0px;
+    padding: 3px 0px;
+}
+.locality_lst {
+    width: 100%;
+    float: left;
+    background: #f2f2f2;
+    padding: 5px 0;
+}
+
+}

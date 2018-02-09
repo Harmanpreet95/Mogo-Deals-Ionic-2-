@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar  color="blue">
+    <!--<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+    <ion-title>My Deals</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ <div padding>
+  <ion-segment>
+    <ion-segment-button value="kittens" (click) = "activeBtn()">
+     Active
+    </ion-segment-button>
+    <ion-segment-button value="puppies" (click) = "allBtn()">
+      All
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<!--<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'puppies'">
+    <ion-item *ngFor = "let allDeals of all">
+      <div class="all_image">
+        <img [src]="allDeals.image">
+        <h4>{{allDeals.resname}}</h4>
+        <h5>${{allDeals.price}} For {{allDeals.dealname}}</h5>
+        <p>Redeemed on {{allDeals.redeem_on}}</p>
+        </div>
+
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-list *ngSwitchCase="'kittens'">
+    <ion-item *ngFor = "let activeDeals of active">
+      <div class="all_image">
+        <img [src]="activeDeals.image">
+        <h4>{{activeDeals.resname}}</h4>
+        <h5>${{activeDeals.price}} For {{activeDeals.dealname}}</h5>
+        <p>Redeemed on {{activeDeals.redeem_on}}</p>
+        </div>
+
+    </ion-item>
+
+  </ion-list>
+</div>-->
+
+
+
+
+
+<div *ngIf = "this.activeid == 0">
+  <ion-list >
+    <ion-item *ngFor = "let allDeals of active">
+      <div class="all_image">
+        <img [src]="allDeals.image">
+        <h4>{{allDeals.resname}}</h4>
+        <h5>${{allDeals.price}} For {{allDeals.dealname}}</h5>
+        <p>{{allDeals.redeem_on}}</p>
+        </div>
+
+    </ion-item>
+  </ion-list>
+</div>
+  
+<div *ngIf = "this.activeid != 0">
+  <ion-list>
+    <ion-item *ngFor = "let activeDeals of all">
+      <div class="all_image">
+        <img [src]="activeDeals.image">
+        <h4>{{activeDeals.resname}}</h4>
+        <h5>${{activeDeals.price}} For {{activeDeals.dealname}}</h5>
+        <p>{{activeDeals.redeem_on}}</p>
+        </div>
+
+    </ion-item>
+
+  </ion-list>
+</div>
+</ion-content>

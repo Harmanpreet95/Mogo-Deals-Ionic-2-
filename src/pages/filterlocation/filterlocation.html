@@ -1,0 +1,134 @@
+<ion-header>
+  
+
+<ion-toolbar color="blue">
+  <!--<button start ion-button menuToggle icon-only *ngIf = "this.User_id == null || this.User_id != null" style= "display: none;">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <button start ion-button menuToggle icon-only *ngIf = "this.User_id != null">
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+     <!--<img src="assets/images/final_logo-01.png" class="logo_pic">
+    <ion-title style="padding-left:55px;">Deals</ion-title>-->
+    <ion-searchbar placeholder = "Search MoGo Deal" [(ngModel)]="name" (ionInput)="setFilteredItems()">
+        
+        </ion-searchbar>
+     <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+         
+        <ion-icon (click)="locat_nxt();" class="btn_locte" name="ios-pin-outline"></ion-icon>
+         <span class="locte_txt">{{this.city_name}}</span>
+    
+
+     <ion-buttons end>
+     <!-- <button ion-button icon-only (click)="presentModal();">
+        <ion-icon class="" ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>-->
+    </ion-buttons>
+    
+
+  </ion-toolbar>
+
+
+  <!--<div class="sub_header">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    </div>-->
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="errorValue == 2">
+ <div class="list_stndrd" *ngFor = "let deallist of this.listing">
+   <ion-grid>
+  <ion-row>
+
+    <ion-col col-4 (click) = "dealdetail(deallist.Deal.id,deallist.Deal.distance,deallist.Deal.start_time)">
+      <div class="image_cover">
+      <img [src]="deallist.Deal.rest_base + deallist.Restaurant.logo">
+      </div>
+      </ion-col>
+     <ion-col class="col" col-8="">
+        <div class="text_deal" (click) = "dealdetail(deallist.Deal.id,deallist.Deal.distance,deallist.Deal.start_time)">
+          <h4>{{deallist.Restaurant.name}}</h4>
+          <h5>${{deallist.Deal.price}} For {{deallist.Deal.deal_name}}</h5>
+          <p>{{deallist.Deal.deal_description}}</p>
+          <!--<p>{{ deallist.Deal.deal_description.length | limitTo: 20 }}{{deallist.Deal.deal_description.length.length > 20 ? '...' : ''}}</p>-->
+          </div> 
+  
+  <div class="iconss">
+     <img *ngIf = "deallist.Deal.fav == '1'" (click) = "favorite(deallist.Deal.id)"  src="assets/images/heart.png" class="heart_setting">
+
+              <img *ngIf = "deallist.Deal.fav == '0'" (click) = "favorite(deallist.Deal.id)"  src="assets/images/heartw.png" class="heart_setting">
+
+             
+          </div>
+       
+     </ion-col>
+  </ion-row>
+</ion-grid>
+ <div class="down_item">
+       <ul>
+         <!--<li>
+           <img class="dtl_pin" src="assets/images/end_lst.png"><span>ENDS IN :<h6 class="myfirst" id="{{deallist.Deal.end_timedate}}" class="heading_tme">{{this.totaltym}}</h6></span>
+           </li>-->
+
+          <li class="limitededition">
+           <img class="dtl_pin" src="assets/images/end_lst.png"><span>ENDS IN :<h6 class="myfirst" id="{{deallist.Deal.start_timedate}}" class="heading_timexx">{{this.totaltym}}</h6>
+           <input  type="hidden" value="{{deallist.Deal.end_timedate}}"></span>
+           </li>
+
+         <li style="width:auto; float:right;"><ion-icon (click) = "map(deallist.Restaurant.latitude,deallist.Restaurant.longitude)" class="pin_pln" ios="ios-pin" md="md-pin"></ion-icon><span>{{deallist.Restaurant.city}} {{deallist.Deal.distance}} mi</span></li>
+         </ul>
+       </div>
+   </div>
+</div>
+
+
+<div *ngIf="this.errorValue == 0">
+   <div class="list_stndrd" *ngFor = "let deallist of this.searchList">
+   <ion-grid>
+  <ion-row>
+
+    <ion-col col-4 (click) = "dealdetail(deallist.Deal.id,deallist.Deal.distance,deallist.Deal.start_time)">
+      <div class="image_cover">
+      <img [src]="deallist.Deal.rest_base + deallist.Restaurant.logo">
+      </div>
+      </ion-col>
+     <ion-col class="col" col-8="">
+        <div class="text_deal" (click) = "dealdetail(deallist.Deal.id,deallist.Deal.distance,deallist.Deal.start_time)">
+          <h4>{{deallist.Restaurant.name}}</h4>
+          <h5>${{deallist.Deal.price}} For {{deallist.Deal.deal_name}}</h5>
+          <p>{{deallist.Deal.deal_description}}</p>
+          <!--<p>{{ deallist.Deal.deal_description.length | limitTo: 20 }}{{deallist.Deal.deal_description.length.length > 20 ? '...' : ''}}</p>-->
+          </div> 
+  
+  <div class="iconss">
+     <img *ngIf = "deallist.Deal.fav == '1'" (click) = "favorite(deallist.Deal.id)"  src="assets/images/heart.png" class="heart_setting">
+
+              <img *ngIf = "deallist.Deal.fav == '0'" (click) = "favorite(deallist.Deal.id)"  src="assets/images/heartw.png" class="heart_setting">
+
+             
+          </div>
+       
+     </ion-col>
+  </ion-row>
+</ion-grid>
+ <div class="down_item">
+       <ul>
+         <!--<li>
+           <img class="dtl_pin" src="assets/images/end_lst.png"><span>ENDS IN :<h6 class="myfirst" id="{{deallist.Deal.end_timedate}}" class="heading_tme">{{this.totaltym}}</h6></span>
+           </li>-->
+
+           <li class="limitededition">
+           <img class="dtl_pin" src="assets/images/end_lst.png"><span>ENDS IN :<h6 class="myfirst" id="{{deallist.Deal.start_timedate}}" class="heading_timexx">{{this.totaltym}}</h6>
+           <input  type="hidden" value="{{deallist.Deal.end_timedate}}"></span>
+           </li>
+
+
+
+         <li style="width:auto; float:right;"><ion-icon (click) = "map(deallist.Restaurant.latitude,deallist.Restaurant.longitude)" class="pin_pln" ios="ios-pin" md="md-pin"></ion-icon><span>{{deallist.Restaurant.city}} {{deallist.Deal.distance}} mi</span></li>
+         </ul>
+       </div>
+   </div>
+  </div>
+<!--<div><button (click)="subscribeTimer0()">{{timer0button}}  1 sec timer</button>{{counter0}}</div>-->
+
+</ion-content>

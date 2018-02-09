@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "571521622422",
+    "firebase_url": "https://mogodeals-a0d12.firebaseio.com",
+    "project_id": "mogodeals-a0d12",
+    "storage_bucket": "mogodeals-a0d12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571521622422:android:5bb55f7ddad6a58e",
+        "android_client_info": {
+          "package_name": "io.ionic2.mogodeals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571521622422-q0b7ogk7278kq55d8j5ohigav69ldoc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic2.mogodeals",
+            "certificate_hash": "47cb76f1c448e5dcbdec112b63e9fdcf58feb460"
+          }
+        },
+        {
+          "client_id": "571521622422-7eh41ledea26dieiu9vblaapa76dbe87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzEIAiZqF21x4tJJ_HyJUTYIrkGnMhQws"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571521622422-o17tged38l6f1m80atq9mnbu08t4kejr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.ionic2.mogodeals"
+              }
+            },
+            {
+              "client_id": "571521622422-7eh41ledea26dieiu9vblaapa76dbe87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

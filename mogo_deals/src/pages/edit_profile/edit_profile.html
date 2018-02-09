@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="blue" hideBackButton="false">
+    <!--<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+    
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+
+<ion-content padding>
+  <div class="spacer" style="width:100%; height:10vh;"></div>
+  <div class="uper_logo">
+ <img class="black_logo" [src]="srcImage">
+  </div>
+  <div class="camera_pic">
+    <img src="assets/images/edit_cmra.png" (click)="openActionSheet()">
+    </div>
+ <div class="spacer" style="width:100%; height:10vh;"></div>
+  <form #editform="ngForm" novalidate>
+ <ion-list>
+  <ion-item class="brdr_frst">
+    <ion-input type="text"  type="text" placeholder="Name" [(ngModel)]="data.name" pattern="[a-zA-Z ]+" name="name"  #name="ngModel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="number" placeholder="phone" [(ngModel)]="data.phone" name="phone"  #phone="ngModel"></ion-input>
+  </ion-item>
+
+</ion-list>
+<button ion-button block class="btn_short" (click)="editprofile(editform)">Submit</button>
+</form>
+<div class="text_lnk">
+<a *ngIf = "this.User_id != null" (click)="changepass()">Change Password</a>
+<a *ngIf = "this.User_id == null" (click)="changepass()" style = "display : none;">Change Password</a>
+<a (click)="logout()">Logout</a>
+</div>
+</ion-content>

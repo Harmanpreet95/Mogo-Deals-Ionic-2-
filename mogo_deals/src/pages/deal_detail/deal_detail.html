@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar color="blue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Deal Details</ion-title>
+   
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+
+
+ <div class="top_image">
+   <img [src]="this.detaildeal.image">
+    </div>
+ <div class="offer_cpn">
+   <img src="assets/images/deal_gft.png">
+   <h5>${{this.detaildeal.price}} For {{this.detaildeal.deal_name}}</h5>
+    <div class="redm_buton">
+      <h4>Redeem Code</h4>
+      <button class="code_btn" ion-button clear><span class="text_cpn">{{redeemCode}}</span></button>
+      <button (click) = "pre_page()" class="code_btn" ion-button clear><span class="text_cpn">Cancel</span></button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+ <!--<div class="tick_offer">
+       <ion-grid>
+          <ion-row (click) = "markRedeem()">
+              <ion-col col-10>
+                <h3 class="blue_redemed">Mark as redeemed</h3>
+              </ion-col>
+              <ion-col col-2><img class="lft_remed" src="assets/images/rmed_icon.png"></ion-col>
+        </ion-row>
+        </ion-grid>
+    </div>-->
+
+
+   <!--<div class="tick_offer"  *ngIf = "tick == 2">
+     <ion-grid>
+  <ion-row style="border-bottom:1px solid #bababa;">
+    <ion-col col-10>
+      <h3 class="blue_redemed">Mark as redeemed</h3>
+    </ion-col>
+     <ion-col col-2><img class="lft_remed" src="assets/images/rmed_icon.png"></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <h3 class="blck_redemed"><img class="rght_remed" src="assets/images/deal_dtlicon4.png">Redeem ID</h3>
+    </ion-col>
+     <ion-col col-6>
+       <h3 style="text-align:right;" class="blck_redemed"><img class="rght_remed" src="assets/images/deal_dlticon3.png">Redeem on</h3>
+     </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6><h3 class="grey_redemed">{{redeemID}}</h3></ion-col>
+     <ion-col col-6><h3 style="text-align:right;" class="grey_redemed">{{ strDate | date :'dd-MMM-yyyy' }}</h3></ion-col>
+  </ion-row>
+</ion-grid>
+     </div>-->
+
+
+
+   <div class="list_detail">
+     <ul>
+      <li><img src="assets/images/deal_dtlicon.png" class="dtl_pin6"><span class="slider_txt">Validity</span> <span class="lalit_detl">{{this.detaildeal.deal_valid_from | date :'dd MMM yyyy' }} - {{this.detaildeal.deal_valid_to | date :'dd MMM yyyy' }}</span></li>
+      <li><img src="assets/images/timer_1.png" class="dtl_pin"><span class="detl_text">timings:<span class="rght_lt">All Days</span></span><span class="lt_elvn">{{this.detaildeal.start_time}} A.M. to {{this.detaildeal.end_time}} P.M.</span></li>
+     
+       </ul>
+     </div>
+     <div class="about_dtl">
+       <h3><img class="dtl_pin" src="assets/images/deal_dtlicon5.png">Terms and Conditions</h3>
+       <div [innerHTML]="this.detaildeal.term_conditions"></div>
+       </div>
+</ion-content>

@@ -1,0 +1,119 @@
+<!-- <ion-header>
+  <ion-navbar color="blue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Details</ion-title>
+   
+  </ion-navbar>
+</ion-header> -->
+
+<ion-header hidden>
+  <ion-navbar color="blue">
+    <button ion-button class="btn_deco" (click)="dismiss();">
+       <ion-icon ios="ios-arrow-round-back-outline" md="md-arrow-round-back"></ion-icon>
+    </button>
+    <ion-title>Details</ion-title>
+   
+  </ion-navbar>
+</ion-header>
+
+
+<ion-header>
+  <ion-navbar color="blue">
+    <button ion-button class="btn_deco" (click)="dismiss();">
+       <ion-icon ios="ios-arrow-round-back-outline" md="md-arrow-round-back"></ion-icon>
+    </button>
+    <ion-title style="width:auto; float:left; line-height:40px;">Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+<!--<ion-header>
+  <ion-navbar color="blue">
+    <button ion-button class="btn_deco" (click)="dismiss();">
+       <ion-icon ios="ios-arrow-round-back-outline" md="md-arrow-round-back"></ion-icon>
+    </button>
+    <ion-title style="width:auto; float:left; line-height:40px;">Deal Details</ion-title>
+  </ion-navbar>
+</ion-header>-->
+
+<ion-content >
+ <div class="top_image">
+   <img [src]="this.detaildeal.image">
+      </div>
+   
+   <div *ngIf = "this.like_check == 0 || this.like_check == 2" class="lft_rating">
+     <img (click)="like()" class="left_dtl" src="assets/images/detail_icon.png" >
+     <span>{{this.detaildeal.totallike}}</span>
+     </div>
+        <div *ngIf = "this.like_check == 1" class="lft_rating">
+     <img (click)="like()" class="left_dtl" src="assets/images/detail_icon2.png">
+     <span>{{this.detaildeal.totallike}}</span>
+     </div>
+    
+  
+
+
+   <img (click) = "socialshare('Hi!Checkout the link here', 'MOGODeals', this.detaildeal.rest_base + this.detailHotel.logo, 'http://rakesh.crystalbiltech.com/mogo/admin/users/login')" class="right_dtl" src="assets/images/detail_share.png">
+
+<!--<img class="right_dtl" src="assets/images/detail_share.png">-->
+   
+
+   <div class="list_detail">
+     <ul>
+      <li><span class="slider_txt">${{this.detaildeal.price}} for {{this.detaildeal.deal_name}} -</span> <span class="lalit_detl">{{this.detailHotel.name}}</span></li>
+
+      <li class="displaynone" style="height:60px;" ><img src="assets/images/end_lst.png" class="dtl_pin">
+      <span class="detl_text">HURRY! ENDS IN <h6 class="myfirst" id="{{this.detaildeal.start_timedate}}" class="heading_tme">{{this.totaltym}}</h6>
+      <input class="myhidden" type="hidden" value="{{this.detaildeal.end_timedate}}">
+      </span>
+      </li>
+
+
+      <!--<li style="display : none;" style="height:60px;" *ngIf = "counterfull != 0"><img src="assets/images/end_lst.png" class="dtl_pin">{{counterfull}}
+      <span class="detl_text">HURRY! ENDS IN jj <h6 class="myfirst" id="{{this.detaildeal.start_timedate}}" class="heading_tme">{{this.totaltym}}</h6>
+      <input class="myhidden" type="hidden" value="{{this.detaildeal.end_timedate}}">
+      </span>
+      </li>-->
+
+      <li><img src="assets/images/loacate.png" class="dtl_pin"><span class="detl_text">{{this.detailHotel.city}}(16001)</span></li>
+      <li><ion-icon ios="ios-restaurant" md="md-restaurant" style= "font-size:1.9em; color:#545454;"></ion-icon><span *ngFor = "let deal of cuisinee; let isLast=last" class="detl_text">{{deal.RestaurantsType.name}}{{isLast ? '' : ', '}}</span></li>
+      <li><img src="assets/images/dtl_con.png" class="dtl_pin1"><span class="detl_text">{{this.DEAL_DISTANCE}}Km</span></li>
+      <li><img src="assets/images/phn_dtl.png" class="dtl_pin2"><span class="detl_text">{{this.detailHotel.owner_phone}}</span></li>
+       </ul>
+     </div>
+    <!--<h1>
+     {{hoursDisplay ? hoursDisplay : '00'}} : {{(minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}} : {{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}} <br/>
+        </h1>-->
+
+   
+
+
+
+<!--<div><button (click)="subscribeTimer0()">{{timer0button}}  1 sec timer</button>{{counter0}}</div>-->
+ 
+  <div class="about_dtl">
+       <h3>About Deal</h3>
+       <p [innerHTML]="this.detaildeal.deal_description">
+</p>
+
+       <!--<p ng-bind-html="this.detaildeal.deal_description"></p>-->
+       </div>
+       <div class="get_btton" *ngIf = "this.check_status == 0">
+      
+         <button ion-button full class="displaynone" style= "font-weight: 300;
+        font-weight: 300;
+    text-align: center;
+    padding: 25px 0;
+    width: 100%;
+    float: left;
+    margin: auto;
+    background: #43C6DB;" (click)="get_nxt();">Get Deal Now</button>
+         
+         <!--<button ion-button full class="fotr_txt" (click)="showAlert();">get deal now</button>-->
+       </div>
+</ion-content>

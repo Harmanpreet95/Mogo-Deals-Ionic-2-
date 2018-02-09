@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="blue">
+    <!--<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="uper_logo">
+ <img class="black_logo" src="assets/images/final_logo-01.png">
+  </div>
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+ <ion-list>
+  <ion-item class="uni_zro">
+    <!--<ion-label fixed>Email ID</ion-label>-->
+    <ion-input type="email" [(ngModel)]="data.email"  name="email"   placeholder="Email" id="email" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$'  #email="ngModel"></ion-input>
+  </ion-item>
+<ion-label class="alert alert-danger outr_vlid" color="danger">
+        <div *ngIf="email.errors && (email.dirty || email.touched)" >
+          <div style="margin-top:10px;" [hidden]="!email.errors.required" >
+            Email is required
+            </div>
+            <div style="margin-top:10px;"[hidden]="!email.errors.pattern" >
+            In-valid Email
+            </div>
+        </div>
+    </ion-label>
+
+  <ion-item class="brdr_btm uni_zro">
+    <!--<ion-label fixed>Password</ion-label>-->
+    <ion-input [(ngModel)]="data.password" name="password" type="password" placeholder="Password" id="password" required   #password="ngModel"></ion-input>
+     
+  </ion-item>
+
+     <ion-label class="alert alert-danger outr_vlid" color="danger">
+    <div *ngIf="password.errors && (password.dirty || password.touched)">
+       <div style="margin-top:10px;" [hidden]="!password.errors.required" >
+         Password is required
+        </div>
+    </div>
+    </ion-label>
+
+</ion-list>
+<button ion-button block class="btn_short" [disabled]="!loginForm.form.valid">Sign In</button>
+</form>
+<div class="sign_alrdy">
+  <p style="margin-bottom:0px;" (click)="frgt_nxt();">Forgot Password?</p>
+  <p>Don't have an account? <span (click)="sgnup_nxt();" style="color:#3b5998;">Sign Up</span></p>
+  <h5>OR</h5>
+  </div>
+
+<div class="icon_logo">
+  <ul>
+    <li><a><img (click)="facebookLogin()" src="assets/images/fb_icon.png"></a></li>
+    <li><a><img (click)="twLogin()" src="assets/images/twtr.png"></a></li>
+    <li><a><img (click)="loginUser()" src="assets/images/gogle_icon.png"></a></li>
+    </ul>
+    </div>
+    <div class="step_skip" (click)="home()">
+      <h4>Skip this Step>></h4>
+      </div>
+</ion-content>

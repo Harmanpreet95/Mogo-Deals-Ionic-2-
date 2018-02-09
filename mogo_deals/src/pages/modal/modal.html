@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="#f2f2f2">
+    <!--<button ion-button (click)="dismiss();">
+       <ion-icon ios="ios-close-outline" md="md-close"></ion-icon>
+    </button>-->
+    <ion-title>Filter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#f2f2f2;">
+  
+<div class="locality_text" *ngIf = "this.User_id != null">
+      <h3>sort by</h3>
+      <ion-grid>
+  <ion-row>
+    <ion-col col-6>
+
+      <a (click) = "myfavorite()" *ngIf = "this.favbtn == 0">
+      <div class="locality_lst">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_hrt.png">My favourite</h4>
+        </div>
+        </a>
+
+        <a (click) = "myfavorite()" *ngIf = "this.favbtn == 1">
+      <div class="locality_lst" style="background-color : #43C6DB;">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_hrt.png">My favourite</h4>
+        </div>
+        </a>
+
+    </ion-col>
+    <ion-col col-6>
+      <a (click) = "popular()" *ngIf = "this.popbtn == 0">
+      <div class="locality_lst">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_star.png">Most popular</h4>
+        </div>
+        </a>
+         <a (click) = "popular()" *ngIf = "this.popbtn == 1">
+      <div class="locality_lst"  style="background-color : #43C6DB;">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_star.png">Most popular</h4>
+        </div>
+        </a>
+    </ion-col>
+  </ion-row>
+  
+   
+</ion-grid>
+      </div>
+
+
+
+
+
+
+  
+    <div class="locality_text1">
+      <h3>filter by</h3>
+      <ion-grid>
+  <ion-row>
+    <ion-col col-6 *ngFor = "let cuisinelist of cuisine; let i = index">
+      <a (click) = "cuisinesclick(cuisinelist.RestaurantsType.id,i)">
+      <div class="locality_lst{{i}}" [class.active]="i == selectedRow">
+        <h4>
+          <!--img class="fltr_lctst1" [src]="assets/images/fltr_iconblck2.png"-->
+          {{cuisinelist.RestaurantsType.name}}</h4>
+          <!--Selected Row : <strong>{{selectedRow}}</strong>-->
+        </div>
+        </a>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+
+      </div>
+
+      <button ion-button block class="btn_short" (click)="apply()">Apply</button>
+</ion-content>

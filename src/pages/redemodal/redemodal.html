@@ -1,0 +1,32 @@
+<ion-header hidden class="modl_redm">
+  <ion-navbar color="#f2f2f2">
+    <button ion-button>
+       <ion-icon ios="ios-close-outline" md="md-close"></ion-icon>
+    </button>
+    <ion-title>Filterss</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:rgba(0,0,0,0.9);">
+<div class="mod_reltve">
+<div class="modl_les">
+ <div class="text_want">
+   <h3>Do you want to mark this deal as redeemed?</h3>
+ </div>
+ <ion-grid>
+  <ion-row>
+    <ion-col col-6>
+      <button class="ok_btn" ion-button color="secondary" (click) = "redeemDeal()">Ok</button>
+      </ion-col>
+
+        <ion-col col-6>
+      <button class="can_btn" (click)="cncl_rede();" ion-button color="danger">Cancel</button>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+</div>   
+
+</div>
+
+</ion-content>
+

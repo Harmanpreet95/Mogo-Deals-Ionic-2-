@@ -1,0 +1,56 @@
+<ion-menu [content]="content"  side="left" id = "menu1">
+  <ion-header>
+    <ion-toolbar no-padding>
+       <div class="image_top" style="background:url(assets/images/menu_bck.jpg); width:100%; height:40vh; background-size: cover;
+background-attachment: scroll;">
+<div class="uper_imge">
+  <img [src]="srcimage">
+  
+  </div>
+  <h4 class="user_lyr">{{uname}}</h4>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="main_mnu" style="background-color:#3b5998;">
+    <ion-list>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.homePage)">
+    <ion-icon class="fnt_ls" name="home"></ion-icon>
+    <span class="hm_mnu">Home</span>
+  </button>
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.listPage)">
+  <ion-icon class="fnt_ls" ios="ios-pricetags-outline" md="md-pricetags"></ion-icon>
+   <span class="hm_mnu">My Deals</span>
+  </button>
+
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.change_passwordPage)" *ngIf = "checkpassword == 1">
+  <ion-icon class="fnt_ls" ios="ios-lock-outline" md="md-lock"></ion-icon>
+    <span class="hm_mnu">Change Password</span>
+  </button>
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.edit_profilePage)">
+   <ion-icon class="fnt_ls" ios="ios-create-outline" md="md-create"></ion-icon>
+   <span class="hm_mnu"> Edit Profile</span>
+  </button>
+  <button menuClose ion-item icon-left (click)="logout()">
+<ion-icon class="fnt_ls" ios="ios-power-outline" md="md-power"></ion-icon>
+   <span class="hm_mnu">Logout</span>
+  </button>
+<!--
+      <button menuClose ion-item  (click)="openPage(pages)">
+        <ion-icon name="home"></ion-icon><span class="hm_mnu">List</span>
+      </button>
+
+      <button menuClose ion-item  (click)="openPage(pages)">
+        <ion-icon name="home"></ion-icon><span class="hm_mnu">Change Password</span>
+      </button>-->
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<!--<ion-nav [root]="rootPage" #content  *ngIf = "this.User_id != null"></ion-nav>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" *ngIf = "this.User_id == null" id="menu1"></ion-nav>-->
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" id = "menu1"></ion-nav>

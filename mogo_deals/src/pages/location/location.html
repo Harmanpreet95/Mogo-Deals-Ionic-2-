@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="blue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Location</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="location_icon" (click) = "autolocation()">
+    <img src="assets/images/locat_icon.png">
+    <h3>Use My Location</h3>
+    </div>
+    <div class="locate_alrdy">
+    <h5>OR</h5>
+    </div>
+    <div class="locality_text">
+      <h3>Search by locality</h3>
+      <ion-grid>
+
+
+            <!--<ion-row>
+              <ion-col col-6 *ngFor = "let place of locations">
+                <a (click) = "dealbycity(this.place.Restaurant.city)">
+                <div class="locality_lst">
+                  <h4>{{this.place.Restaurant.city}}</h4>
+                  </div>
+                  </a>
+              </ion-col>
+            </ion-row>-->
+
+        <div class="icn_box11">
+          <ion-searchbar class="bdr11"
+                [(ngModel)]="autocomplete.query" 
+                [showCancelButton]="true" 
+                (ionInput)="updateSearch()" 
+                (ionCancel)="dismiss()"
+                placeholder="Search for a city">
+        </ion-searchbar>
+       
+          </div>
+
+        <ion-list class="list11">
+           <!--<span class="location"><ion-icon name="navigate"></ion-icon></span>-->
+            <ion-item *ngFor="let item of autocompleteItems" 
+            (click)="dealbycity(item.description)">
+            {{ item.description }}
+            </ion-item>
+        </ion-list>
+
+</ion-grid>
+      </div>
+</ion-content>

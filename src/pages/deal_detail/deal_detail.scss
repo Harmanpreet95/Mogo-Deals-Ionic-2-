@@ -1,0 +1,263 @@
+page-deal_detail {
+.top_image {
+  
+    width: 100%;
+    float: left;
+    height: 27vh;
+    position: relative;
+    overflow: hidden;
+}
+.left_dtl {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 135px;
+  left: 17px;
+}
+.right_dtl {
+  width: 40px;
+  height: 40px;
+  top: 135px;
+  position: absolute;
+  right: 17px;
+}
+.list_detail {
+    width: 100%;
+    float: left;
+        margin-top:15px;
+}
+.list_detail ul {
+  width: 100%;
+  float: left;
+  list-style: none;
+  padding: 0px 20px;
+  
+}
+.list_detail ul li {
+ width: 100%;
+float: left;
+margin: 0px 0;
+border-bottom: 1px solid #bababa;
+padding: 10px 0;
+
+}
+.slider_txt {
+    width: 74%;
+font-weight: 500;
+font-size: 18px;
+text-transform: capitalize;
+float: left;
+margin-bottom: 5px;
+margin-left:7px;
+
+}
+.lalit_detl {
+    width: 100%;
+font-weight: 500;
+font-size: 16px;
+color: #636363;
+text-transform: capitalize;
+float: left;
+
+}
+.dtl_pin.icon.icon-ios.ion-ios-power-outline {
+    width: auto;
+    color: #545454;
+    font-size: 20px;
+}
+.detl_text {
+    width: 100%;
+font-weight: 500;
+font-size: 18px;
+text-transform: capitalize;
+margin-left: 7px;
+color: #101010;
+
+}
+.dtl_pin {
+   width: 16px;
+}
+.dtl_pin1 {
+   width: 27px;
+}
+.dtl_pin2 {
+    width: 14px;
+}
+.about_dtl {
+    width: 89%;
+    float: left;
+    background: #fff;
+    margin: 0px 16px;
+}
+.about_dtl h3 {
+    width: 100%;
+    float: left;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+.about_dtl p {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+    color: #1a1a1a;
+}
+.toolbar-background-ios {
+    background: #43C6DB;
+}
+.toolbar-title-ios {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    pointer-events: auto;
+    text-transform: capitalize;
+}
+.fotr_txt .toolbar-title-ios {
+    font-weight: 300;
+    color: #fff;
+}
+.rght_lt {
+  width: auto;
+  float: right;
+  color: #636363;
+  font-weight: 500;
+  font-size: 16px;
+}
+.lt_elvn {
+width: 100%;
+float: left;
+color: #636363;
+font-weight: 500;
+font-size: 16px;
+margin-top: 5px;
+
+}
+.tick_offer {
+  width: 89%;
+  float: left;
+ margin-left:16px;
+  background: #fff;
+  box-shadow: 2px 0px 6px #888888;
+margin-top: 170px;
+
+}
+.blue_redemed {
+  width: 100%;
+  float: left;
+  color: #43C6DB;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+.blck_redemed {
+  width: 100%;
+  float: left;
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0;
+}
+.rght_remed {
+  width: 16%;
+  margin-right: 5px;
+}
+.grey_redemed {
+    width: 100%;
+    float: left;
+    color: #636363;
+    font-size: 16px;
+    margin: 0px;
+    font-weight: 400;
+    padding-left: 19px;
+}
+
+.lft_remed {
+    width: 59%;
+    text-align: right;
+}
+.list_detail ul li:first-child {
+    border-top: 1px solid #bababa;
+}
+.dtl_pin6 {
+    width: 14px;
+    float: left;
+}
+.offer_cpn{
+   width: 89%;
+float: left;
+margin-left: 16px;
+background: #fff;
+-webkit-box-shadow: 2px 0px 6px #888888;
+box-shadow: 2px 0px 6px #888888;
+padding: 16px;
+position: absolute;
+top: 132px;
+}
+.offer_cpn img {
+    width: 70px;
+    position: absolute;
+    top: -177px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+.offer_cpn h5 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #545454;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #bababa;
+}
+.text_cpn {
+    color: #363636;
+    font-weight: 600;
+    font-size: 18px;
+}
+.code_btn {
+    width: 47%;
+    float: left;
+    border: 1px solid #47c4da;
+    border-radius: 0px;
+}
+.redm_buton h4 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    color: #000;
+}
+.redm_buton {
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+
+.top_image img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.dtl_pin {
+    width: 16px;
+}
+.btn_deco{
+    width:auto;
+    float:left;
+    background: transparent;
+    box-shadow: 0 0 0 0; 
+    font-size: 18px;
+}
+}

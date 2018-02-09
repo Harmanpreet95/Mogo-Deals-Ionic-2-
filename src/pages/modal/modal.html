@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-navbar color="blue">
+    <button ion-button class="btn_deco" (click)="dismiss();">
+       <ion-icon ios="ios-arrow-round-back-outline" md="md-arrow-round-back"></ion-icon>
+    </button>
+    <ion-title style="width:auto; float:left; line-height:40px;">Filter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#f2f2f2;">
+  
+<div class="locality_text" *ngIf = "this.User_id != null || this.google_id != null || this.User_twid != null || this.User_fbid != null">
+      <h3>Sort by</h3>
+      <ion-grid>
+  <ion-row>
+    <ion-col col-6>
+
+      <a (click) = "myfavorite()" *ngIf = "this.favbtn == 0">
+      <div class="locality_lst">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_hrt.png">My favourite</h4>
+        </div>
+        </a>
+
+        <a (click) = "myfavoritereset()" *ngIf = "this.favbtn == 1">
+      <div class="locality_lst" style="background-color : #43C6DB;">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_hrt.png">My favourite</h4>
+        </div>
+        </a>
+
+    </ion-col>
+    <ion-col col-6>
+      <a (click) = "popular()" *ngIf = "this.popbtn == 0">
+      <div class="locality_lst">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_star.png">Most popular</h4>
+        </div>
+        </a>
+         <a (click) = "popularreset()" *ngIf = "this.popbtn == 1">
+      <div class="locality_lst"  style="background-color : #43C6DB;">
+        <h4><img class="fltr_lctst" src="assets/images/fltr_star.png">Most popular</h4>
+        </div>
+        </a>
+    </ion-col>
+  </ion-row>
+  
+  
+</ion-grid>
+      </div>
+
+<div class="locality_text1">
+      <h3>Filter by</h3>
+      <ion-grid>
+  <ion-row>
+        <ion-col col-6 *ngFor = "let cuisinelist of cuisine">
+        <ion-item>
+          <ion-label style="text-transform:uppercase; font-weight:300;">{{cuisinelist.RestaurantsType.name}}
+          <ion-checkbox checkbox-primary checked="false" (ionChange) = "cuisinesclick(cuisinelist.RestaurantsType.id,$event)"></ion-checkbox>
+ 
+        </ion-label>
+      </ion-item>
+    </ion-col>
+
+     
+    <!--<ion-col col-6 *ngFor = "let cuisinelist of cuisine">
+  
+        <ion-item>
+  <ion-label>
+    <!--<img class="fltr_lctst1" src="assets/images/fltr_iconblck.png">-->
+   <!-- {{cuisinelist.RestaurantsType.name}}
+  <ion-checkbox checkbox-primary checked="true" (click) = "cuisinesclick(cuisinelist.RestaurantsType.id)"></ion-checkbox>
+  </ion-label>
+</ion-item>
+
+    </ion-col>-->
+  </ion-row>
+
+</ion-grid>
+
+      </div>
+
+    <!--<div class="locality_text1">
+      <h3>Filter by</h3>
+      <ion-grid>
+  <ion-row>
+    <ion-col col-6 *ngFor = "let cuisinelist of cuisine; let i = index">
+
+        <ion-item>
+            <ion-label>
+              <!--<img class="fltr_lctst1" src="assets/images/fltr_iconblck.png">-->
+            <!--  {{cuisinelist.RestaurantsType.name}}
+            <ion-checkbox  [class.active]="i == selectedRow" (click) = "cuisinesclick(cuisinelist.RestaurantsType.id,i)" color="dark" style = "background-color: #43C6DB;" checked="true"></ion-checkbox>
+            </ion-label>
+        </ion-item>-->
+
+
+
+<!--class="locality_lst{{i}}"-->
+
+
+<!--
+      <a (click) = "cuisinesclick(cuisinelist.RestaurantsType.id,i)">
+      <div >
+        <h4>
+          <!--img class="fltr_lctst1" [src]="assets/images/fltr_iconblck2.png"-->
+         <!-- {{cuisinelist.RestaurantsType.name}}</h4>
+   
+        </div>
+        </a>-->
+
+      <button ion-button block class="btn_short" [disabled]="this.cuisine_id == '' && this.mostpopular == '' && this.favorite == ''" (click)="apply()">Apply</button>
+      <!-- <button ion-button block class="btn_short" *ngIf = "this.cuisine_id == ''" (click)="apply()">Apply</button> -->
+     
+
+  
+</ion-content>

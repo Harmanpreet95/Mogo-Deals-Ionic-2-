@@ -1,0 +1,96 @@
+page-intro {
+.bck_top{
+    width:100%;
+    float: left;
+    position: relative;
+}
+.overlay_top{
+width: 100%;
+position: absolute;
+top: 0;
+right: 0px;
+bottom: 0px;
+left: 0px;
+margin: auto;
+height: 320px;
+
+
+}
+.frnt_logo{
+    width: 50%;
+float: none;
+margin: 0 auto;
+
+}
+.slider_search {
+  width: 100%;
+  float: left;
+  margin-top: 33%;
+  color: #fff;
+}
+.slider_search h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.email_lower {
+  width: 100%;
+  float: left;
+}
+.email_lower h4 {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+.email_lower h5 {
+  width: 100%;
+  float: left;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+}
+.or_size {
+    width: 100%;
+    float: left;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-size: 16px;
+}
+.icon_logo {
+     width: 100%;
+    float: left;
+    margin-top: 30px;
+    
+    text-align: center;
+}
+.icon_logo ul {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.icon_logo li {
+  list-style: none;
+  width: 33%;
+  float: left;
+}
+.icon_logo ul li a {
+  width: 100%;
+}
+.alredy_login {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+.alredy_login p {
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    float: left;
+}
+.icon_logo li a img {
+    width: 44px;
+    height: 44px;
+}
+}

@@ -1,0 +1,109 @@
+page-list {
+.all_image {
+    width: 100%;
+    float: left;
+    background:#f2f2f2;
+    margin-bottom: 15px;
+    box-shadow: 0px 6px 0px #dbdbdb;
+
+}
+.all_image img {
+    width: 100%;
+}
+.all_image h4 {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    padding-left:16px;
+
+}
+.all_image h5 {
+    width: 100%;
+    color: #1a1a1a;
+    font-weight: 300;
+    font-size: 16px;
+    padding-left:16px;
+}
+.all_image p {
+    width: 100%;
+    font-weight: 300;
+    color: #429b00;
+    font-size: 16px;
+    padding-left:16px;
+}
+.item-ios.item-block .item-inner {
+    padding-right: 0;
+    border-bottom: 0.55px solid #c8c7cc;
+
+}
+.item-ios {
+    padding-left: 0;
+    border-radius: 0;
+    position: relative;
+    font-size: 1.7rem;
+    color: #000;
+    background-color: #fff;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+.label-ios {
+    margin: 0;
+}
+
+.segment-ios .segment-button.segment-activated {
+    color: #fff;
+    background-color: #43C6DB;
+    opacity: 1;
+    -webkit-transition: 100ms all linear;
+    transition: 100ms all linear;
+    font-size: 18px;
+}
+.segment-ios .segment-button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 0;
+    height: 6vh;
+    border-width: 1px;
+        border-left-width: 1px;
+    border-style: solid;
+    border-color: #43C6DB;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    color: #43C6DB;
+    background-color: transparent;
+     font-size: 18px;
+    border-radius: 0px !important;
+}
+ion-segment {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 70%;
+    float: none;
+    margin: 0 auto;
+}
+.segment-md .segment-button {
+    color: #43C6DB;
+    
+}
+.segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+    border-color: #43C6DB;
+    opacity: 1;
+}
+}

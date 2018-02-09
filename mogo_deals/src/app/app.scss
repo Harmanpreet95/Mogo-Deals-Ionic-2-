@@ -1,0 +1,213 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+
+.main_mnu .list-ios .item-block .item-inner {
+    border-bottom: 0.55px solid #768bb7;
+}
+.main_mnu .item-ios {
+    padding-left: 16px;
+    border-radius: 0;
+    position: relative;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: transparent;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.main_mnu .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: 0px;
+}
+.main_mnu .item-md {
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main_mnu .list-md .item-block .item-inner {
+    border-bottom: 1px solid #768bb7;
+}
+.fnt_ls{
+    font-size:1.2em !important;
+}
+.uper_imge {
+  width: 70px;
+  float: left;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #92928a;
+  border-radius: 5px;
+  margin: 80px 30px;
+}
+.uper_imge img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+ margin: auto;
+    height: 100%;
+    width: 100%;
+}
+.hm_mnu {
+    margin-left: 10px;
+    font-weight: 300;
+}
+.user_lyr {
+    position: absolute;
+    color: #fff;
+    right: 115px;
+    top: 86px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('assets/font/lato-black-webfont.woff2') format('woff2'),
+         url('assets/font/lato-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latoblack_italic';
+    src: url('assets/font/lato-blackitalic-webfont.woff2') format('woff2'),
+         url('assets/font/lato-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latobold';
+    src: url('assets/font/lato-bold-webfont.woff2') format('woff2'),
+         url('assets/font/lato-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latobold_italic';
+    src: url('assets/font/lato-bolditalic-webfont.woff2') format('woff2'),
+         url('assets/font/lato-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latohairline';
+    src: url('assets/font/lato-hairline-webfont.woff2') format('woff2'),
+         url('assets/font/lato-hairline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latohairline_italic';
+    src: url('assets/font/lato-hairlineitalic-webfont.woff2') format('woff2'),
+         url('assets/font/lato-hairlineitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latoitalic';
+    src: url('assets/font/lato-italic-webfont.woff2') format('woff2'),
+         url('assets/font/lato-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latolight';
+    src: url('assets/font/lato-light-webfont.woff2') format('woff2'),
+         url('assets/font/lato-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latolight_italic';
+    src: url('assets/font/lato-lightitalic-webfont.woff2') format('woff2'),
+         url('assets/font/lato-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('assets/font/lato-regular-webfont.woff2') format('woff2'),
+         url('assets/font/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+*{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}

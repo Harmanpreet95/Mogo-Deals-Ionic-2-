@@ -1,0 +1,92 @@
+page-modal {
+.locality_text {
+    width: 100%;
+    float: left;
+    margin: 0px;
+}
+.locality_text h3 {
+    width: 100%;
+float: left;
+font-weight: 300;
+text-transform: capitalize;
+font-size: 21px;
+padding-left: 16px;
+color: #808080;
+
+}
+.locality_text1 {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    position:relative;
+}
+.locality_text1 h3 {
+    width: 100%;
+float: left;
+font-weight: 300;
+text-transform: capitalize;
+font-size: 21px;
+padding-left: 16px;
+color: #808080;
+
+}
+.active{
+  background-color: #43C6DB;;
+}
+.locality_lst {
+    width: 100%;
+    float: left;
+    background: #fff;
+    padding: 5px 0;
+h4 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #1a1a1a;
+    margin: 0px;
+    padding: 3px 0px;
+}
+&:hover {
+    background-color: #3b5998;
+}
+
+}
+.locality_lst:hover {
+    background-color: #3b5998;
+}
+.locality_lst h4:hover {
+    color:#fff
+}
+.fltr_lctst{
+    width: 13%;
+    margin-right: 4px;
+}
+.fltr_lctst1{
+   width: 13%;
+margin-right: 4px;
+position: absolute;
+left: 14px;
+top: 16px;
+
+}
+ion-checkbox{
+    margin: 8px 6px 8px 2px !important;
+    opacity: 0;
+}
+input[type="checkbox"]:checked ion-label {
+ background: #3b5998; 
+}
+
+.item-inner{
+    border-bottom:0 !important;
+}
+.btn_short {
+    background-color: #1a1a1a;
+    border-radius: 0px;
+    width: 95%;
+    margin-left: 14px;
+}
+}
